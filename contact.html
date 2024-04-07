@@ -27,10 +27,12 @@
     </nav>
     <div class="contactSection">
         <div class="contactContainer">
-            <input type="text" placeholder="Name" id="name">
-            <input type="text" placeholder="Email" id="email">
-            <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
-            <input type="submit" value="Submit" class="btn">
+            <form action="">
+                <input type="text" placeholder="Name" id="name">
+                <input type="text" placeholder="Email" id="email">
+                <textarea name="message" placeholder="Message" cols="30" rows="10"></textarea>
+                <input type="submit" value="Submit" class="btn" id="submitBtn">
+            </form>
             <div class="icons">
                 <a href="tel:+27813065104"><i class="fa fa-phone" aria-hidden="true"></i></a>
                 <a href="https://wa.me/+27617514638"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
@@ -42,19 +44,25 @@
     <footer>
         <div class="footer">
             <div class="left">
-                <p>479a Somekele Street Zone 4 Meadowlands 1852</p>
-                <a href="https://github.com/Xoli-Nxiweni"><i class="fa fa-github" aria-hidden="true"></i></a>
-                <a href="https://www.linkedin.com/in/xolinxiweni/"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                <a href="https://wa.me/+27617514638"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="index.html"><h1>< X O _ / > </X></h1></a>
+                <p>86 Somekele Street Zone 4 Meadowlands 1852, Soweto, Johannesburg, Gauteng.</p>
+                <a href="https://github.com/Xoli-Nxiweni" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
+                <a href="https://www.linkedin.com/in/xolinxiweni/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+                <a href="https://wa.me/+27617514638" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
+                <a href="https://xoli-nxiweni.github.io/personalportfolio/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
               </div>
-              <div class="center">
-                  <p>Something goes in here</p>
-              </div>
+              
               <div class="right">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d375.7328290088186!2d27.893658151681294!3d-26.22679650686154!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e95a0cc5d3b99b3%3A0x544fbe7b052b70ba!2s981%20Somkele%20St%2C%20Meadowlands%20East%20Zone%204%2C%20Meadowlands%20East%2C%201852!5e1!3m2!1sen!2sza!4v1712175077194!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d894.7675870751737!2d27.893674038394266!3d-26.226903654293828!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjbCsDEzJzM2LjUiUyAyN8KwNTMnMzguNiJF!5e0!3m2!1sen!2sza!4v1712486961206!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
         </div>
         <p><i class="fa fa-copyright"></i> CodeTribe Bootcamp 2024. All rights reserved. | Xoli Nxiweni Designs.</p>
     </footer>
+    <script>
+        let button = document.querySelector('#submitBtn');
+            button.addEventListener('click', () =>{
+                alert("Form Under Development");
+        });
+    </script>
 </body>
 </html>
