@@ -50,16 +50,72 @@ nav ul li a.active,
 nav ul li a:hover{
     color: #1f85a3;
 }
+.menu-toggle {
+    display: none;
+    position: absolute;
+    right: 10%;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+.menu-toggle i{
+    font-size: 1.5em;
+}
+
+@media screen and (max-width: 768px) {
+    .logo h1 {
+        font-size: 1.2em;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        transition: all .4s ease-in-out;
+    }
+
+    nav ul li {
+        width: 100%;
+        bottom: 0;
+        transition: all .4s ease-in-out;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        display: block;
+    }
+
+    .menu-toggle {
+        display: block;
+        transition: all .4s ease-in-out;
+    }
+    .show{
+        display: flex;
+        transition: all .4s ease-in-out;
+    }
+}
+
+
+video{
+    width: 100%;
+    height: 100vh;
+}
+.vidSection{
+    overflow: hidden;
+    background: rgb(0, 0, 0);
+}
 .introduction,
 .infoContainer{
     height: 100vh;
     overflow: hidden;
+    background: snow;
 }
-/* video{
-    width: 100%;
-} */
 
-.introduction{
+/* .introduction{
     background-image: url(/Assets/Images/download.png);
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -78,7 +134,7 @@ nav ul li a:hover{
 .rightSection img{
     background-attachment: fixed;
    
-}
+} */
 .effect{
     color: #000;
 }
@@ -91,18 +147,19 @@ nav ul li a:hover{
 }
 .infoContainer p{
     font-size: 13px;
+    padding: 0 10px 0 0;
 }
 .infoContainer img{
-    width: 520px;
+    width: 420px;
     transition: all .4s ease-in-out;
-    box-shadow: 0 0 10px #000000;
     cursor: pointer;
     border-radius: 20px;
 }
 .infoContainer img:hover{
     transform: scale(1.2);
     overflow: hidden;
-    border-radius: 0;
+    /* border-radius: 0; */
+    box-shadow: 0 0 10px #000000;
 }
 .info{
    padding: 0 10% 0 0;
@@ -281,4 +338,58 @@ footer p:last-child{
 .footer .left i:hover{
     transform: scale(1.1);
     color: #1f85a3;
+}
+
+@media (max-width: 960px) {
+    .infoContainer{
+        padding: 10px 10%;
+        text-align: center;
+        flex-direction: column;
+    }
+    .infoContainer p{
+        text-align: left;
+        flex-direction: column;
+    }
+    .footer{
+        grid-template-columns: repeat(1,auto);
+    }
+    .footer iframe{
+        height: 100px;
+        border-radius: 20px;
+    }
+}
+@media (max-width: 560px) {
+    .vidSection{
+        align-items: center;
+        height: auto;
+    }
+    .infoContainer{
+        height: 100vh;
+        padding: 10px 10%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        margin: 0 auto;
+        gap: 25px;
+    }
+    .infoContainer img{
+        /* padding: 50px 0 0 0; */
+        width: 320px;
+        transition: all .4s ease-in-out;
+        cursor: pointer;
+        border-radius: 20px;
+    }
+    .infoContainer img:hover{
+        transform: scale(1);
+        box-shadow: none;
+    }
+    .introduction{
+        grid-template-columns: repeat(1, 1fr);
+        padding: 25% 10% 0 10%;
+    }
+    .footer iframe{
+        height: 100px;
+        border-radius: 20px;
+        width: 200px;
+    }
 }
