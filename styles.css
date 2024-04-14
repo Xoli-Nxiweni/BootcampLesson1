@@ -178,27 +178,61 @@ span{
     grid-template-columns: 1fr;
     gap: 20px;
     padding: 0 10% 50px 10%;
+    background: snow;
 }
 .aboutSection{
     /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-row: auto;
     align-items: center;
     gap: 20px;
     padding: 100px 0 0 0;
 }
 .Portfolio{
-    background: #d0dee3;
+    background: #fff;
     text-align: center;
+    grid-row: auto;
+    box-shadow: 0 0 10px grey;
 }
 .Portfolio i{
-   color: #ffffff;
+   color: #1f85a3;
    font-size: 1.4em;
    padding: 10px;
 }
 .Portfolio p{
     text-align-last: left;
     padding: 0 10px;
+}
+.Projects h3{
+    text-align: center;
+    color: #1f85a3;
+}
+.project{
+    background: #fff;
+    padding: 10px;
+    box-shadow: 0 0 10px grey;
+}
+.Experience h1,
+.Projects h1{
+   text-align: center;
+   color: #1f85a3;
+}
+.projContainer{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    text-align: center;
+    padding: 20px 0;
+}
+.projContainer p{
+    padding: 10px;
+    font-size: .7em;
+}
+.projContainer .btn{
+    padding: 10px;
+    transition: all .4s ease-in-out;
+    border-radius: 10px;
 }
 .aboutSection h1{
     color: #1f85a3;
@@ -292,10 +326,12 @@ input:focus, textarea:focus{
     color: #fff;
     border: none;
     cursor: pointer;
+    transition: all .4s ease-in-out;
+    border: 1px solid #1f85a3;
 }
 .btn:hover{
     color: #1f85a3;
-    background: #ffffff8d;
+    background: transparent;
 }
 .icons{
     display: flex;
@@ -436,5 +472,8 @@ footer p:last-child{
     input,
     textarea{
         width: 220px;
+    }
+    .projContainer{
+        grid-template-columns: 1fr;
     }
 }
