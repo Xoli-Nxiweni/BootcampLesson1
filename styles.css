@@ -181,10 +181,8 @@ span{
     background: snow;
 }
 .aboutSection{
-    /* height: 100vh; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-row: auto;
     align-items: center;
     gap: 20px;
     padding: 100px 0 0 0;
@@ -192,16 +190,15 @@ span{
 .Portfolio{
     background: #fff;
     text-align: center;
-    grid-row: auto;
     box-shadow: 0 0 10px grey;
 }
 .Portfolio i{
    color: #1f85a3;
    font-size: 1.4em;
-   padding: 10px;
+   padding: 5px;
 }
 .Portfolio p{
-    text-align-last: left;
+    text-align: left;
     padding: 0 10px;
 }
 .Projects h3{
@@ -212,6 +209,7 @@ span{
     background: #fff;
     padding: 10px;
     box-shadow: 0 0 10px grey;
+    padding: 20px 5px;
 }
 .Experience h1,
 .Projects h1{
@@ -223,16 +221,17 @@ span{
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     text-align: center;
-    padding: 20px 0;
+    padding: 20px;
 }
 .projContainer p{
-    padding: 10px;
+    padding: 5px 5px 20px 5px;
     font-size: .7em;
 }
 .projContainer .btn{
-    padding: 10px;
+    padding: 5px 10px;
     transition: all .4s ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
+    font-size: 14px;
 }
 .aboutSection h1{
     color: #1f85a3;
@@ -240,28 +239,6 @@ span{
 .aboutSection p{
     font-size: 13px;
 }
-/* .aboutCont:nth-child(1),
-.aboutCont:nth-child(4){
-    background: #00000017;
-}
-.aboutCont:nth-child(2),
-.aboutCont:nth-child(3){
-    background: #1f84a32d;
-}
-.aboutCont{
-    border: 1px solid #1f85a3;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 5%;
-    transition: all .4s ease-in-out;
-}
-.aboutCont:hover{
-    transform: scaleX(1.025);
-    box-shadow: 0 0 10px #707070;
-} */
-
 /* contact section */
 .contactSection{
     padding: 100px 0 20px 0;
@@ -365,7 +342,7 @@ footer{
     align-items: center;
     justify-content: space-between;
     text-align: center;
-    padding: 20px 10% 0 10%;
+    /* padding: 20px 10% 0 10%; */
 }
 footer a{
     color: #1f85a3;
@@ -375,21 +352,24 @@ footer p:last-child{
     text-align: center;
     font-size: 10px;
 }
+footer p{
+    color: #000;
+}
 .footer iframe{
     width: 400px;
     height: 200px;
     border-radius: 10px;
-    padding: 0 0 5px 0;
+    padding: 20px 0 5px 0;
 }
-.footer .left i{
+.leftFooter i{
     font-size: 2.5em;
-    padding: 10px;
+    padding: 5px;
     margin: 10px;
     border-radius: 50%;
     color: #000;
     transition: all .4s ease-in-out;
 }
-.footer .left i:hover{
+.leftFooter i:hover{
     transform: scale(1.1);
     color: #1f85a3;
 }
@@ -407,16 +387,19 @@ footer p:last-child{
     .aboutSection{
         grid-template-columns: repeat(1, 1fr);
     }
+    .projContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
     .footer{
         grid-template-columns: repeat(2,auto);
-        justify-content: space-around;
+        justify-content: space-evenly;
     }
     .footer iframe{
         height: 100px;
         border-radius: 20px;
     }
-    .footer .left i{
-        font-size: 1.6em;
+    .leftFooter i{
+        font-size: 2em;
     }
     .footer p{
         font-size: 11px;
@@ -472,8 +455,5 @@ footer p:last-child{
     input,
     textarea{
         width: 220px;
-    }
-    .projContainer{
-        grid-template-columns: 1fr;
     }
 }
