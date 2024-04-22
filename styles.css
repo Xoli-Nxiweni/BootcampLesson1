@@ -163,7 +163,7 @@ video{
     box-shadow: 0 0 10px #000000;
 }
 .info{
-   padding: 0 5% 10px 5%;
+   padding: 0 13% 0 0;
 }
 span{
     color: #1f85a3;
@@ -241,6 +241,7 @@ span{
 }
 /* contact section */
 .contactSection{
+    height: 100vh;
     padding: 100px 0 20px 0;
     display: flex;
     align-items: center;
@@ -275,7 +276,7 @@ input{
     margin: 5px;
     border: none;
     transition: all .4s ease-in-out;
-    border-bottom: 1px solid #848484;
+    border: .2em solid transparent;
     background: #ffffff8d;
     /* border-radius: 10px 10px 0 0; */
 }
@@ -289,13 +290,14 @@ textarea{
     padding: 10px;
     margin: 5px;
     border: none;
-    border-bottom: 1px solid #848484;
+    border: .2em solid transparent;
     transition: all .4s ease-in-out;
     background: #ffffff8d;
 }
 input:focus, textarea:focus{
     outline: none;
-    border-bottom: 1px solid red;
+    border-left: .2em solid #ff0000;
+    border-right: .2em solid #ff0000;
 }
 .btn{
     text-transform: uppercase;
@@ -309,6 +311,12 @@ input:focus, textarea:focus{
 .btn:hover{
     color: #1f85a3;
     background: transparent;
+}
+.btn:focus{
+    color: #1f85a3;
+    background: transparent;
+    border-left: .2em solid #1f85a3;
+    border-right: .2em solid #1f85a3;
 }
 .icons{
     display: flex;
@@ -388,7 +396,7 @@ footer p{
         grid-template-columns: repeat(1, 1fr);
     }
     .projContainer{
-        grid-template-columns: repeat(1, 1fr);
+        grid-template-columns: repeat(2, 1fr);
     }
     .footer{
         grid-template-columns: repeat(2,auto);
@@ -412,6 +420,10 @@ footer p{
     footer p:last-child{
         text-align: center;
         font-size: 7px;
+    }
+    .contactSection{
+        height: auto;
+        width: auto;
     }
 }
 @media (max-width: 560px) {
@@ -456,4 +468,15 @@ footer p{
     textarea{
         width: 220px;
     }
+    .contactSection{
+        height: auto;
+        width: auto;
+    }
+    .projContainer{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+form span{
+    color: #ff0000;
+    font-size: 14px;
 }

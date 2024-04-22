@@ -42,20 +42,8 @@
             
         </div>
     </section> -->
-    <section class="infoContainer">
-        <div class="info">
-            <h1><span>Hello</span> My Name is Xolile Nxiweni</h1>
-            <p>A <span class="effect"></span></p>
-            <p>I am passionate about innovative solutions and am a quick learner, adapting 
-                easily to new technologies. I excel as an effective problem solver and analytical 
-                thinker. My professional roles encompass software development with a focus on Java 
-                programming, web development, and logo design. I immerse myself in exploring new 
-                technologies and coding projects, engaging in creative design activities, and 
-                enjoying socializing and networking opportunities on my free time.</p>
-        </div>
-        <div class="image">
-            <img src="/Assets/Images/More X AI.png" alt="">
-        </div>
+    <section class="infoContainer" id="infoContainer">
+        <!-- data rendered dynamically -->
     </section>
     <footer>
         <div class="footer">
@@ -69,4 +57,35 @@
     </footer>
 </body>
 <script src="script.js" defer></script>
+<script>
+
+const BioInfomation = document.getElementById('infoContainer');
+const renderInfoContainer = ()=>{
+const name = 'Xolile';
+const surname = 'Nxiweni';
+const imageSrc = "/Assets/Images/More X AI.png"
+const Bio = `I am passionate about innovative solutions and am a quick learner, adapting 
+      easily to new technologies. I excel as an effective problem solver and analytical 
+      thinker. My professional roles encompass software development with a focus on Java 
+      programming, web development, and logo design. I immerse myself in exploring new 
+      technologies and coding projects, engaging in creative design activities, and 
+      enjoying socializing and networking opportunities on my free time.`;
+
+  const textContainer = document.createElement('div');
+  textContainer.classList.add('info');
+  textContainer.innerHTML = `
+  <h1><span>Hello</span> I'm ${name} ${surname}</h1>
+  <p>A <span class="effect"></span></p>
+  <p>${Bio}</p>
+  `
+  const imageContainer = document.createElement('div');
+  imageContainer.classList.add('image');
+  imageContainer.innerHTML = `
+  <img src="${imageSrc}" alt="">
+  `
+  BioInfomation.appendChild(textContainer);
+  BioInfomation.appendChild(imageContainer);
+}
+renderInfoContainer();
+</script>
 </html>

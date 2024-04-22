@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/yourcode.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contact</title>
 </head>
 <body class="contactBody">
     <nav>
@@ -28,18 +28,21 @@
     </nav>
     <div class="contactSection">
         <div class="contactContainer">
-            <form action="">
-                <input type="text" placeholder="Name & Surname" id="name" required>
-                <input type="text" placeholder="Email" id="email" required>
-                <textarea name="message" placeholder="Message" cols="30" rows="10" required></textarea>
+            <form action="https://formspree.io/f/xgegrkeg" method="post" id="myForm">
+                <input type="text" placeholder="Name & Surname" id="name">
+                <span id="nameError"></span>
+                <input type="text" placeholder="Email" id="email" name="_replyto" >
+                <span id="emailError"></span>
+                <textarea name="message" placeholder="Message" cols="30" rows="10" id="message"></textarea>
+                <span id="messageError"></span>
                 <input type="submit" value="Submit" class="btn" id="submitBtn">
             </form>
-            <div class="icons">
+            <!-- <div class="icons">
                 <a href="tel:+27813065104"><i class="fa fa-phone" aria-hidden="true"></i></a>
                 <a href="https://wa.me/+27617514638"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
                 <a href="mailto:xolinxiweni@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
                 <a href="sms:+27813065104"><i class="fa fa-comment" aria-hidden="true"></i></a>
-            </div>
+            </div> -->
         </div>
     </div>
     <footer>
@@ -55,4 +58,3 @@
     </footer>
 </body>
 <script src="script.js" defer></script>
-</html>

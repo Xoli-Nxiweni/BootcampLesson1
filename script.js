@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Menu Toggle Functionality
     const toggleMenu = () => {
         const nav = document.querySelector('nav ul');
         nav.classList.toggle('show');
@@ -10,8 +9,6 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     document.querySelector('.menu-toggle').addEventListener('click', toggleMenu);
-
-    // Typed.js Initialization
     const typed = new Typed(".effect", {
         strings: ["UX/UI Designer.", "Frontend Developer.", "Java Programmer."],
         loop: true,
@@ -20,13 +17,20 @@ document.addEventListener('DOMContentLoaded', () => {
         backDelay: 2500,
     });
 });
+
+//Rendering Index information
+
+
+
+/////////////////////////////
+
     // Render Projects Function
     const renderInformation = () => {
         const ProjectsInfo = [
             {
                          heading: 'Personal Portfolio',
                          description: 'Created my debut web portfolio featuring a dynamic Weather App. Utilizing HTML, CSS, and JS, users can input their preferred city to instantly access accurate weather conditions. This project showcases my proficiency in web development and enthusiasm for creating engaging, functional interfaces.',
-                         link: 'https://xoli-nxiweni.github.io/personalportfolio/index.html',
+                         link: 'https://xolinxiweniresume.netlify.app/',
                          button: 'View Project'
                         },
                         
@@ -67,14 +71,13 @@ document.addEventListener('DOMContentLoaded', () => {
         ];
 
         const boxesContainer = document.querySelector('.projContainer');
-
-        ProjectsInfo.forEach(project => {
+        ProjectsInfo.forEach(boxPara => {
             const postInfo = document.createElement('div');
             postInfo.classList.add('project');
             postInfo.innerHTML = `
-                <h3>${project.heading}</h3>
-                <p>${project.description}</p>
-                <a href="${project.link}" target="_blank" rel="noopener noreferrer" class="btn">${project.button}</a>
+                <h3>${boxPara.heading}</h3>
+                <p>${boxPara.description}</p>
+                <a href="${boxPara.link}" target="_blank" class="btn">${boxPara.button}</a>
             `;
             boxesContainer.appendChild(postInfo);
         });
@@ -83,8 +86,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // footer icons rendering
 var thisYear = new Date();
 var currentYear = thisYear.getFullYear();
-console.log(currentYear); // Logs the current year to the console
-
 let footer = document.querySelector('footer');
 let year = () => {
     const yearToday = document.createElement('p');
@@ -93,10 +94,9 @@ let year = () => {
     yearToday.textContent =`
     Xoli Nxiweni Designs & Development. | All rights reserved. CodeTribe Bootcamp ${currentYear}.
     `;
-    footer.appendChild(yearToday); // Appends the paragraph to the footer
+    footer.appendChild(yearToday);
 };
 year();
-
 
 
 const footerIcons = document.querySelector('#leftFooter');
@@ -171,17 +171,51 @@ let populateInformation = () => {
     aboutSection.appendChild(population);
   });
 };
-
-
-
-
-
-
-
-
-
 //functions rendering
 document.addEventListener('DOMContentLoaded', ()=>{
-    populateInformation();
-    renderInformation();
+  populateInformation();
+  renderInformation();
 })
+
+//contact form validation 
+const name = document.getElementById('name');
+const email = document.getElementById('email');
+const form = document.getElementById('myForm');
+const nameError = document.getElementById('nameError');
+const emailError = document.getElementById('emailError');
+const message = document.getElementById('message');
+const messageError = document.getElementById('messageError');
+form.addEventListener('submit', (e) => {
+
+  var emailCheck = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+
+  if (name.value === '' || name.value === null || name.value.length < 5) {
+      e.preventDefault();
+      nameError.innerHTML = "*Name is Required";
+  }
+  name.addEventListener('input', () => {
+    if (name.value.trim() !== '') {
+        nameError.innerHTML = " ";
+    }
+  });
+
+  if (!email.value.match(emailCheck)) {
+      e.preventDefault();
+      emailError.innerHTML = "*Valid Email is Required";
+  } 
+  email.addEventListener('input', () => {
+    if (email.value.trim() !== '' && email.value.length > 5) {
+        emailError.innerHTML = " ";
+    }
+  });
+
+  if (message.value === '' || message.value === null || message.value < 8) {
+    e.preventDefault();
+    messageError.innerHTML = "*Message is Required";
+} 
+  message.addEventListener('input', () => {
+    if (message.value.trim() !== '' && message.value.length > 8) {
+        messageError.innerHTML = " ";
+    }
+  });
+});
