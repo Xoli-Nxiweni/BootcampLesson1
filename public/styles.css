@@ -253,7 +253,7 @@ span{
     align-items: center;
     position: relative;
     width: 100%;
-    background-image: url(/Assets/Images/wp5070708.jpg);
+    background-image: url(/public/Assets/Images/wp5070708.jpg);
     background-attachment: fixed;
     background-size: cover;
     background-repeat: no-repeat;
