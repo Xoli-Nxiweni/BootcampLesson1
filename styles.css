@@ -162,8 +162,10 @@ video{
     /* border-radius: 0; */
     box-shadow: 0 0 10px #000000;
 }
-.info{
-   padding: 0 13% 0 0;
+@media (min-width:1020px) {
+    .info{
+        padding: 0 13% 0 0;
+     }
 }
 span{
     color: #1f85a3;
@@ -177,17 +179,19 @@ span{
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 0 10% 50px 10%;
+    padding: 0 8% 50px 8%;
     background: snow;
 }
 .aboutSection{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    grid-auto-columns: auto;
     align-items: center;
     gap: 20px;
     padding: 100px 0 0 0;
 }
 .Portfolio{
+    grid-auto-columns: auto;
     background: #fff;
     text-align: center;
     box-shadow: 0 0 10px grey;
@@ -200,6 +204,7 @@ span{
 .Portfolio p{
     text-align: left;
     padding: 0 10px;
+    font-size: 13px;
 }
 .Projects h3{
     text-align: center;
@@ -207,7 +212,6 @@ span{
 }
 .project{
     background: #fff;
-    padding: 10px;
     box-shadow: 0 0 10px grey;
     padding: 20px 5px;
 }
@@ -239,8 +243,10 @@ span{
 .aboutSection p{
     font-size: 13px;
 }
+
 /* contact section */
 .contactSection{
+    
     height: 100vh;
     padding: 100px 0 20px 0;
     display: flex;
@@ -384,13 +390,21 @@ footer p{
 
 @media (max-width: 960px) {
     .infoContainer{
-        padding: 10px 10%;
+        height: auto;
+        padding: 20px 10% 0px 10%;
         text-align: center;
         flex-direction: column;
     }
-    .infoContainer p{
+    .infoContainer p:last-child{
         text-align: left;
         flex-direction: column;
+    }
+    .Experience{
+        font-size: 13px;
+    }
+    .infoContainer img:hover{
+        transform: scale(1);
+        box-shadow: 0 0 10px 5px grey;
     }
     .aboutSection{
         grid-template-columns: repeat(1, 1fr);
@@ -432,24 +446,24 @@ footer p{
         height: auto;
     }
     .infoContainer{
-        height: 100vh;
-        /* padding: 10px 10%; */
+        /* height: 100vh; */
+        padding: 10px 10%;
         /* display: flex; */
-        flex-direction: column-reverse;
+        flex-direction: column;
         align-items: center;
         margin: 0 auto;
         gap: 25px;
     }
     .infoContainer img{
-        /* padding: 50px 0 0 0; */
-        width: 320px;
+        height: auto;
+        width: 250px;
         transition: all .4s ease-in-out;
         cursor: pointer;
         border-radius: 20px;
     }
-    .infoContainer img:hover{
-        transform: scale(1);
-        box-shadow: none;
+    .info p{
+        font-size: 11px;
+        padding: 0;
     }
     .introduction{
         grid-template-columns: repeat(1, 1fr);
@@ -479,4 +493,5 @@ footer p{
 form span{
     color: #ff0000;
     font-size: 14px;
+    padding: 0 10px;
 }

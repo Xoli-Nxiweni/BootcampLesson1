@@ -109,7 +109,6 @@ let footerPopulation = ()=>{
     <a href="https://github.com/Xoli-Nxiweni" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
     <a href="https://www.linkedin.com/in/xolinxiweni/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
     <a href="https://wa.me/+27617514638" target="_blank"><i class="fa fa-whatsapp" aria-hidden="true"></i></a>
-    <a href="https://xoli-nxiweni.github.io/personalportfolio/" target="_blank"><i class="fa fa-globe" aria-hidden="true"></i></a>
     <a href="tel:+27813065104" target="_blank"><i class="fa fa-phone" aria-hidden="true"></i></a>
     `
     footerIcons.appendChild(icons);
@@ -150,7 +149,7 @@ let informationArray = [
     iconClass: 'fa fa-code',
     title: 'Technical Skills',
     items: [
-      'Java Programming',
+      'Java & C# Programming',
       'Linux',
       'HTML5, CSS3, JS',
       'Logo Design',
@@ -219,3 +218,4 @@ form.addEventListener('submit', (e) => {
     }
   });
 });
+
