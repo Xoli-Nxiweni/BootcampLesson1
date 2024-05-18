@@ -90,7 +90,7 @@ let footer = document.querySelector('footer');
 let year = () => {
     const yearToday = document.createElement('p');
     yearToday.classList.add('footerP');
-    let icon = '<i class="fa fa-copyright"></i>'
+    // let icon = '<i class="fa fa-copyright"></i>
     yearToday.textContent =`
     Xoli Nxiweni Designs & Development. | All rights reserved. CodeTribe Bootcamp ${currentYear}.
     `;
@@ -123,7 +123,7 @@ const aboutSection = document.querySelector('.aboutSection');
 let informationArray = [
   {
     iconClass: 'fa fa-graduation-cap',
-    title: 'Education',
+    // title: 'Education',
     items: [
       'National Senior Certificate ',
       'Lamula J. Secondary School - 2011 - 2016',
@@ -135,7 +135,7 @@ let informationArray = [
   },
   {
     iconClass: 'fa fa-smile-o',
-    title: 'Soft Skills',
+    // title: 'Soft Skills',
     items: [
       'Adaptive',
       'Problem Solving',
@@ -147,7 +147,7 @@ let informationArray = [
   },
   {
     iconClass: 'fa fa-code',
-    title: 'Technical Skills',
+    // title: 'Technical Skills',
     items: [
       'Java & C# Programming',
       'Linux',
@@ -164,7 +164,7 @@ let populateInformation = () => {
     let population = document.createElement('div');
     population.classList.add('Portfolio');
     population.innerHTML = `
-      <i class="${info.iconClass}" aria-hidden="true"></i><h1>${info.title}</h1>
+      <i class="${info.iconClass}" aria-hidden="true"></i>
       ${info.items.map(item => `<p><i class="fa fa-angle-right" aria-hidden="true"></i>${item}</p>`).join('')}
     `;
     aboutSection.appendChild(population);

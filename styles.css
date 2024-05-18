@@ -215,9 +215,11 @@ span{
     box-shadow: 0 0 10px grey;
     padding: 20px 5px;
 }
+.book i{
+    font-size: 3em;
+}
 .Experience h1,
 .Projects h1{
-   text-align: center;
    color: #1f85a3;
 }
 .projContainer{
